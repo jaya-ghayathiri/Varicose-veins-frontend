@@ -1,0 +1,285 @@
+/* ===== Layout ===== */
+.teleconsultation-layout {
+  display: flex;
+  min-height: 100vh;
+  margin-left: 260px;
+  background: linear-gradient(to right, #eef2f7, #f9fafc);
+}
+
+.teleconsultation-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===== Page & Section Titles ===== */
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  border-left: 6px solid #1e3a8a;
+  padding-left: 12px;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-size: 22px;
+  margin: 30px 0 18px;
+  font-weight: 600;
+  color: #374151;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* ===== Card Grid ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 25px;
+}
+
+/* ===== Doctor Card ===== */
+/* General consultation smaller card */
+.doctor-card.general {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;          /* smaller padding */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-top: 3px solid transparent;
+  max-width: 260px;
+}
+
+.doctor-card.general .doctor-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 14px;
+  border: 4px solid #1e3a8a;
+  transition: transform 0.3s ease;
+}
+
+.doctor-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+  border-top: 4px solid #1e3a8a;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.doctor-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 14px;
+  border: 4px solid #1e3a8a;
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover .doctor-img {
+  transform: scale(1.08);
+}
+
+.doctor-card h3 {
+  margin: 10px 0 5px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.designation {
+  font-size: 14px;
+  font-style: italic;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.doctor-card p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #444;
+}
+
+.doctor-card.general h3 {
+  margin: 10px 0 5px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.doctor-card.general p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #444;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+}
+
+.confirm-btn {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+.cancel-btn {
+  background: #9ca3af;
+}
+
+.cancel-btn:hover {
+  background: #6b7280;
+}
+
+/* ===== Modal ===== */
+/* Overlay background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal Box */
+.modal-content {
+  background: #ffffff;
+  padding: 30px 35px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Heading */
+.modal-content h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Form */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.booking-form input {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.booking-form input:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 6px rgba(30,136,229,0.25);
+}
+
+/* Buttons inside modal */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 12px;
+}
+
+/* ===== Booking Card ===== */
+.booking-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid #1e3a8a;
+}
+
+.booking-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.booking-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.booking-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+.status {
+  margin: 8px 0;
+  font-weight: 600;
+  color: #059669;
+}
+
+.empty-text {
+  font-size: 15px;
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
+  padding: 20px 0;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

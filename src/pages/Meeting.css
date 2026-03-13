@@ -1,0 +1,62 @@
+/* Full screen layout */
+.meeting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+/* Heading */
+.meeting-header {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #333;
+}
+
+/* Jitsi Iframe */
+.meeting-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Back button */
+.back-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: #0066cc;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+  background-color: #004999;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .meeting-header {
+    font-size: 1.2rem;
+  }
+
+  .back-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

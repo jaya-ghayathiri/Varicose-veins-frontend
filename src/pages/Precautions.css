@@ -1,0 +1,112 @@
+/* Container */
+.precautions-container {
+  margin-left: 270px; /* Sidebar width */
+  padding: 30px 20px; /* Reduced horizontal padding for small screens */
+  flex: 1;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f0f4f8, #e0f2fe);
+  box-sizing: border-box;
+}
+
+/* Main Title */
+.precautions-container h1 {
+  font-size: clamp(28px, 5vw, 36px); /* scales with screen width */
+  text-align: center;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+/* Grid Layout */
+.precaution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* flexible columns */
+  gap: 20px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Card Styles */
+.precaution-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Hover Effect */
+.precaution-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+/* Card Image */
+.precaution-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #1e3a8a;
+}
+
+/* Card Title */
+.precaution-card h2 {
+  font-size: 1.1rem;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Card Text */
+.precaution-card p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.precaution-card:hover p {
+  color: #1e3a8a;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .precautions-container {
+    margin-left: 0; /* remove sidebar space */
+    padding: 25px 15px;
+  }
+  .precaution-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .precautions-container h1 {
+    font-size: 24px;
+  }
+  .precaution-card h2 {
+    font-size: 1rem;
+  }
+  .precaution-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .precaution-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

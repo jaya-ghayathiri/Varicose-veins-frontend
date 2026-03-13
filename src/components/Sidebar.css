@@ -1,0 +1,93 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 25px 20px;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+}
+
+/* Profile section */
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.profile-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.profile-role {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.sidebar-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 35px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.sidebar-link.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Logout Button */
+.sidebar-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  font-size: 14px bold;
+  color: #fca5a5;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-top: 220px;
+}
