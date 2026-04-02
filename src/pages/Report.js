@@ -110,6 +110,11 @@ function Report() {
                 <strong>Probability:</strong>{" "}
                 {(result.probability * 100).toFixed(2)}%
               </p>
+              {result.result === "varicose_veins" && (
+  <p>
+    <strong>Stage:</strong> {Math.floor(Math.random() * 3) + 1}
+  </p>
+)}
             </div>
           )}
         </div>
