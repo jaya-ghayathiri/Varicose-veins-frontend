@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect,useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   Home,
@@ -14,6 +15,14 @@ import {
 import "./Sidebar.css";
 
 const Sidebar = () => {
+   const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser) {
+      setUser(storedUser);
+    }
+  }, []);
   return (
     <div className="sidebar">
       {/* Profile Section */}
@@ -22,7 +31,9 @@ const Sidebar = () => {
           <User size={26} />
         </div>
         <div>
-          <h3 className="profile-name">Reena Paarthiban</h3>
+          <h3 className="profile-name">
+            {user ? user.name : "Guest User"}
+          </h3>
           <p className="profile-role">Patient</p>
         </div>
       </div>
